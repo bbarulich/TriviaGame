@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../images/americanFlag.jpg');
+  background-size: cover;
+
+}
+
+#container {
+  background-color: rgba(255, 255, 255, 0.25);
+  min-height: 700px;
+  padding-top: 30px;
+}
+
+ .header h1{
+   text-align: center;
+   font-family: 'Cabin', sans-serif;
+   font-size: 46px;
+   color: black;
+ }
+
+ #time {
+   font-size: 30px;
+   color: black;
+   text-align: center;
+ }
+
+ #question {
+   text-align: center;
+   font-size: 36px;
+   padding-top: 0px;
+   margin-top: 0px;
+   color: black;
+   background-color: #EEE9E9;
+   border: 2px solid #8B8989;
+ }
+
+ #right, .wrong, .results {
+   background-color: #EEE9E9;
+   border: 2px solid #8B8989;
+   height: 90px;
+   padding-top: 25px;
+   text-align: center;
+   font-size: 22px;
+   margin-top: 10px;
+ }
+
+.wrong:hover {
+  background-color: #3498db;
+}
+
+#right:hover {
+  background-color: #3498db;
+}
+
+#reset:hover {
+  background-color: #3498db;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  margin-left: 235px;
+  margin-top: 50px;
+}
