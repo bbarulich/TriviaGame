@@ -57,7 +57,7 @@ $(document).ready(function(){
   question10 = {
  question: "Which of these pets has become an invasive species in the U.S.",
  answers: ["<div class = 'row wrong'><p>European Rabbit</p></div>","<div class = 'row wrong'><p>Sugar Glider</p></div>","<div id = 'right' class = 'row'><p>Burmese Python</p></div>","<div class = 'row wrong'><p>Cockatiel</p></div>"],
- right: "<div id = 'right' class = 'row'><p>Burmese Python</p></div>"
+ right: "<div id = 'right' class = 'row'><p>Burmese</p></div>"
  },
  ];
 
@@ -65,7 +65,7 @@ $(document).ready(function(){
 //Functions
 //================================================================================================================================================================
 
- function insertQ() {
+  function insertQ() {
  $("#question").html(questions[qcount].question);
  $("#answers").html(questions[qcount].answers);
  }
@@ -73,14 +73,15 @@ $(document).ready(function(){
  function countDown() {
  var i = 10;
  myinterval = setInterval(function() {
- $("#time").html("<p>Time Left: " + i + "</p>");
+ $("#time").html("<p>seconds left: " + i + "</p>");
 
  if (i === 0) {
  clearInterval(myinterval);
  unanswered++;
-  $('#time').empty();
+ rightA();
+ $('#time').empty();
  qcount++;
- setTimeout(nextQ, 3	*1000);
+ setTimeout(nextQ, 3*1000);
  }
  else {
  i--;
@@ -89,6 +90,10 @@ $(document).ready(function(){
  }
 
 
+ function rightA(){
+ $('#question').append("<p>The correct answer was:</p>");
+ $('#answers').html(questions[qcount].right);
+ }
 
  function endOfGame(){
  $('#answers').append('<div class= "row results">Questions guessed right: '+guessRight+'<div>');
@@ -121,7 +126,7 @@ $(document).ready(function(){
 
  }
  else {
- $('#question').html("You should probally learn more about Animals");
+ $('#question').html("You should probaly learn more about Animals");
  endOfGame();
  }
  }
@@ -131,19 +136,19 @@ $(document).ready(function(){
  $('.wrong').on("click", function(){
  $('#time').empty();
  console.log("clicked");
- rightImage();
+ rightA();
  qcount++;
  guessWrong++;
  clearInterval(myinterval);
- setTimeout(nextQ, 5*1000);
+ setTimeout(nextQ, 3*1000);
  });
  $('#right').on("click",function(){
  $('#time').empty();
- rightImage();
+ rightA();
  qcount++;
  guessRight++;
  clearInterval(myinterval);
- setTimeout(nextQ, 1*1000);
+ setTimeout(nextQ, 3*1000);
  console.log(qcount);
  console.log(guessRight);
 

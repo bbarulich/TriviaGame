@@ -3,13 +3,20 @@
 }
 
 body {
-  background: url('../images/americanFlag.jpg');
-  background-size: cover;
+  background: url('../images/Triviabackground.png');
 
 }
 
+p{
+  color:#20457D;
+}
+#start{
+   color: #5C3448;
+
+  
+}
+
 #container {
-  background-color: rgba(255, 255, 255, 0.25);
   min-height: 700px;
   padding-top: 30px;
 }
@@ -18,7 +25,7 @@ body {
    text-align: center;
    font-family: 'Cabin', sans-serif;
    font-size: 46px;
-   color: black;
+   color: #FC654B;
  }
 
  #time {
@@ -33,13 +40,13 @@ body {
    padding-top: 0px;
    margin-top: 0px;
    color: black;
-   background-color: #EEE9E9;
-   border: 2px solid #8B8989;
+   background-color: #ECE0BD;
+   border: 2px solid #ECE0BD;
  }
 
  #right, .wrong, .results {
-   background-color: #EEE9E9;
-   border: 2px solid #8B8989;
+   background-color: #ECE0BD;
+   border: 2px solid #ECE0BD;
    height: 90px;
    padding-top: 25px;
    text-align: center;
@@ -59,9 +66,4 @@ body {
   background-color: #3498db;
 }
 
-img {
-  width: 300px;
-  height: 300px;
-  margin-left: 235px;
-  margin-top: 50px;
-}
+
